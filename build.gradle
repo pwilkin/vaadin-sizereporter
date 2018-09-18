@@ -2,8 +2,8 @@ apply plugin: 'java'
 
 defaultTasks 'jar'
 
-version = '0.1.4'
-ext.vaadinVersion='7.3.9'
+version = '0.2.0'
+ext.vaadinVersion='8.5.2'
 
 repositories {
     mavenCentral()

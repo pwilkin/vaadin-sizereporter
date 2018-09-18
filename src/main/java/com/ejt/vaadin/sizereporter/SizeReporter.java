@@ -44,6 +44,8 @@ public class SizeReporter extends AbstractExtension {
 
     private int width = -1;
     private int height = -1;
+    private int absoluteLeft = -1;
+    private int absoluteTop = -1;
 
     /**
      * Construct a size reporter for a specified component.
@@ -54,9 +56,11 @@ public class SizeReporter extends AbstractExtension {
         extend(component);
         registerRpc(new SizeReporterRpc() {
             @Override
-            public void sizeChanged(int width, int height) {
+            public void sizeChanged(int width, int height, int absoluteLeft, int absoluteTop) {
                 SizeReporter.this.width = width;
                 SizeReporter.this.height = height;
+                SizeReporter.this.absoluteLeft = absoluteLeft;
+                SizeReporter.this.absoluteTop = absoluteTop;
                 fireResizeEvent();
             }
         });
@@ -108,7 +112,7 @@ public class SizeReporter extends AbstractExtension {
     }
 
     private void fireResizeEvent() {
-        ComponentResizeEvent event = new ComponentResizeEvent(component, width, height);
+        ComponentResizeEvent event = new ComponentResizeEvent(component, width, height, absoluteLeft, absoluteTop);
         for (ComponentResizeListener listener : resizeListeners) {
             listener.sizeChanged(event);
         }

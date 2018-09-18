@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/vaadin-sizereporter.iml" filepath="$PROJECT_DIR$/vaadin-sizereporter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vaadin-sizereporter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/vaadin-sizereporter_main.iml" group="vaadin-sizereporter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/vaadin-sizereporter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/vaadin-sizereporter_test.iml" group="vaadin-sizereporter" />
     </modules>
   </component>
 </project>
-

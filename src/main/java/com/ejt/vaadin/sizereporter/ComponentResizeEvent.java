@@ -23,11 +23,15 @@ import java.util.EventObject;
 public class ComponentResizeEvent extends EventObject {
     private final int width;
     private final int height;
+    private final int absoluteLeft;
+    private final int absoluteTop;
 
-    public ComponentResizeEvent(Component source, int width, int height) {
+    public ComponentResizeEvent(Component source, int width, int height, int absoluteLeft, int absoluteTop) {
         super(source);
         this.width = width;
         this.height = height;
+        this.absoluteLeft = absoluteLeft;
+        this.absoluteTop = absoluteTop;
     }
 
     public int getWidth() {
@@ -36,5 +40,13 @@ public class ComponentResizeEvent extends EventObject {
 
     public int getHeight() {
         return height;
+    }
+
+    public int getAbsoluteLeft() {
+        return absoluteLeft;
+    }
+
+    public int getAbsoluteTop() {
+        return absoluteTop;
     }
 }

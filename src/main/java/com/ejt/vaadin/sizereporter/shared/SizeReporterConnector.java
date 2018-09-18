@@ -71,7 +71,7 @@ public class SizeReporterConnector extends AbstractExtensionConnector {
     }
 
     private void reportSize() {
-        sizeReporterRpc.sizeChanged(widget.getOffsetWidth(), widget.getOffsetHeight());
+        sizeReporterRpc.sizeChanged(widget.getOffsetWidth(), widget.getOffsetHeight(), widget.getAbsoluteLeft(), widget.getAbsoluteTop());
     }
 
 }

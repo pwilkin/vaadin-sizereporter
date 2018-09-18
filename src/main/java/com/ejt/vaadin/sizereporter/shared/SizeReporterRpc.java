@@ -19,5 +19,5 @@ package com.ejt.vaadin.sizereporter.shared;
 import com.vaadin.shared.communication.ServerRpc;
 
 public interface SizeReporterRpc extends ServerRpc {
-    void sizeChanged(int width, int height);
+    void sizeChanged(int width, int height, int absoluteLeft, int absoluteTop);
 }
